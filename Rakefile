@@ -14,4 +14,13 @@ if defined?(RSpec)
   end
 end
 
+task :console do
+  require "irb"
+  require "irb/completion"
+  require "pp"
+  
+  ARGV.clear
+  IRB.start
+end
+
 task :default => :test
