@@ -5,6 +5,7 @@ $LOAD_PATH << "./lib"
 # Initialize environment
 require "bundler/setup"
 require "dotenv"
+require "yaml"
 
 # Load environment variables
 Dotenv.load

@@ -11,6 +11,7 @@ end
 require "./init"
 require "sinatra"
 require "rack/test"
+require "database_cleaner"
 
 # Load all support helpers
 Dir["./spec/support/*.rb"].each { |f| require(f) }
@@ -21,12 +22,16 @@ RSpec.configure do |config|
   config.include FixtureHelper
 
   config.before(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
   end
 
   config.before(:each) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.start
   end
 
   config.after(:each) do
+    DatabaseCleaner.clean
   end
 end
 
