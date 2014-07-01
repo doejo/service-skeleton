@@ -7,12 +7,9 @@ defaults: &defaults
   timeout: 5000
 
 development:
-  adapter: postgresql
-  username: postgres
+  <<: *defaults
   database: app_development
 
 test:
   <<: *defaults
-  adapter: postgresql
-  username: postgres
   database: app_test
