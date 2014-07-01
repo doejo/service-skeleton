@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    active_model_serializers (0.8.1)
+      activemodel (>= 3.0)
     activemodel (4.1.2)
       activesupport (= 4.1.2)
       builder (~> 3.1)
@@ -89,6 +91,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.8)
   activerecord (~> 4.1)
   activerecord-postgresql-adapter (~> 0)
   database_cleaner
