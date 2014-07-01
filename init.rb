@@ -22,3 +22,6 @@ require "service/application"
 
 # Load all endpoints
 Dir["./service/endpoints/*_endpoint.rb"].each { |file| require(file) }
+
+# Load middleware
+Dir["./middleware/*.rb"].each { |file| require(file) }
