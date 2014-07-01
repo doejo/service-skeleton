@@ -22,13 +22,15 @@ module Middleware
       @app.call(env).tap do |response|
         status, headers, body = *response
 
-        @logger.info("Response: #{status}")
-        @logger.info("Headers: #{headers}")
-        @logger.info("Response:")
+        @logger.info "Response: #{status}"
+        @logger.info "Headers: #{headers}"
+        @logger.info "Response:"
 
         body.each do |line|
           @logger.info(line)
         end
+
+        @logger.info ""
       end
     end
   end
