@@ -1,6 +1,6 @@
 module FixtureHelper
   def fixtures_path
-    File.expand_path("../fixtures", __FILE__)
+    File.expand_path("../../fixtures", __FILE__)
   end
 
   def fixture_path(path)
