@@ -7,7 +7,7 @@ module Middleware
 
     def call(env)
       unless ENV["RACK_ENV"] == "development"
-        return app.call(env)
+        return @app.call(env)
       end
 
       headers = env.
