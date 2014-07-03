@@ -36,7 +36,10 @@ RSpec.configure do |config|
 end
 
 def app
-  Service::Application
+  Service::Application.tap do |a|
+    a.use Middleware::RequestLogger, Logger.new("./log/requests_test.log")
+    a.use Middleware::ExceptionHandler
+  end
 end
 
 configure do
