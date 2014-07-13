@@ -4,6 +4,7 @@ lock "3.2.1"
 set :application,   "TODO: application name goes here"
 set :repo_url,      "TODO: repo url goes here"
 set :branch,        "master"
+set :deploy_to,     "/home/apps/#{fetch(:application)}"
 set :linked_files,  %w{config/database.yml .env}
 set :keep_releases, 10
 
