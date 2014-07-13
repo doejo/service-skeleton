@@ -16,7 +16,9 @@ gem "sentry-raven",                    "~> 0.9", require: false
 gem "foreman",                         "0.63.0", require: false
 
 group :development do
-  gem "capistrano", "3.2.1"
+  gem "capistrano",         "3.2.1"
+  gem "capistrano-bundler", "1.1.2"
+  gem "capistrano-rails",   "1.1.1"
 end
 
 group :development, :test do
