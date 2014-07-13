@@ -16,6 +16,7 @@ if defined?(RSpec)
   end
 end
 
+desc "Start application console"
 task :console do
   require "irb"
   require "irb/completion"

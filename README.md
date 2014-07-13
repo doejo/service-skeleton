@@ -51,9 +51,10 @@ By default, the service will be available at `http://localhost:5000`
 ## Rake tasks
 
 ```
-rake db:create              # Creates the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:create:all to create all databas...
+rake console                # Start application console
+rake db:create              # Creates the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:create:all to create all databases in the config)
 rake db:create_migration    # Create a migration (parameters: NAME, VERSION)
-rake db:drop                # Drops the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:drop:all to drop all databases in ...
+rake db:drop                # Drops the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:drop:all to drop all databases in the config)
 rake db:fixtures:load       # Load fixtures into the current environment's database
 rake db:migrate             # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
 rake db:migrate:status      # Display status of migrations
