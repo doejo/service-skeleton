@@ -10,8 +10,9 @@ require "yaml"
 # Load environment variables
 Dotenv.load
 
-# Set rack env in case if its not set
+# Set rack env and rails env in case if its not set
 ENV["RACK_ENV"] ||= "development"
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"]
 
 # Require initializers
 Dir["./config/initializers/*.rb"].each { |file| require(file) }
