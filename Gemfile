@@ -15,6 +15,10 @@ gem "thin",                            "~> 1.6", require: false
 gem "sentry-raven",                    "~> 0.9", require: false
 gem "foreman",                         "0.63.0", require: false
 
+group :development do
+  gem "capistrano", "3.2.1"
+end
+
 group :development, :test do
   gem "rspec"
   gem "rack-test"
