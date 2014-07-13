@@ -1,30 +1,33 @@
 # config valid only for Capistrano 3.1
 lock "3.2.1"
 
-set :application,   "TODO: application name goes here"
-set :repo_url,      "TODO: repo url goes here"
+set :application,   "service_skeleton"
+set :repo_url,      "https://github.com/doejo/service-skeleton.git"
 set :branch,        "master"
 set :deploy_to,     "/home/apps/#{fetch(:application)}"
 set :linked_files,  %w{config/database.yml .env}
+set :linked_dirs,   %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle}
 set :keep_releases, 10
 
-namespace :deploy do
+namespace :foreman do
+  desc "Export application scripts"
+  task :export do
+    on roles(:app), in: :groups, limit: 3, wait: 10 do
+      within release_path do
+        execute :sudo, "bundle exec foreman export upstart /etc/init -a #{fetch(:application)} -u apps -l #{fetch(:shared_path)}/log"
+      end
+    end
+  end
+
   desc "Restart application"
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join("tmp/restart.txt")
-    end
-  end
-
-  after :publishing, :restart
-
-  after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, "cache:clear"
-      # end
+      execute :sudo, "service #{fetch(:application)} start || sudo service #{fetch(:application)} restart"
     end
   end
+end
+
+namespace :deploy do
+  after :publishing, "foreman:export"
+  after :publishing, "foreman:restart"
 end
