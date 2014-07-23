@@ -11,7 +11,7 @@ gem "active_model_serializers",        "~> 0.8"
 gem "sinatra-activerecord",            "~> 2.0"
 gem "pg",                              "~> 0.17.0"
 gem "activerecord-postgresql-adapter", "~> 0"
-gem "thin",                            "~> 1.6", require: false
+gem "puma",                            "~> 2.9", require: false
 gem "sentry-raven",                    "~> 0.9", require: false
 gem "foreman",                         "0.63.0", require: false
 
