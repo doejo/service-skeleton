@@ -7,7 +7,7 @@ Base structure for building API services
 - Sinatra
 - JSON
 - Foreman
-- Thin
+- Puma
 - Dotenv
 - Rspec
 
