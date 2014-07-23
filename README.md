@@ -16,6 +16,7 @@ Extras:
 - Active Record 4
 - Postgres Adapter
 - Sentry
+- Capistrano
 
 ## Getting Started
 
@@ -69,6 +70,20 @@ rake db:structure:dump      # Dump the database structure to db/structure.sql
 rake db:version             # Retrieves the current schema version number
 rake raven:test[dsn]        # Send a test event to the remote Sentry server
 rake test                   # Run RSpec code examples
+```
+
+## Deployment
+
+Deployment is done via [Capistrano](http://capistranorb.com/). 
+
+Check `config/deploy.rb` for generic deployment steps.
+Deployment stages are located under `config/deploy` directory.
+
+Deployment tasks:
+
+```
+cap [stage] deploy:setup # Setup deployment structure on the server
+cap [stage] deploy       # Execute deployment
 ```
 
 ## Testing
