@@ -16,14 +16,7 @@ if defined?(RSpec)
   end
 end
 
-desc "Start application console"
-task :console do
-  require "irb"
-  require "irb/completion"
-  require "pp"
-  
-  ARGV.clear
-  IRB.start
-end
+# Require all available rake tasks under "tasks" dir
+Dir["#{File.dirname(__FILE__)}/tasks/**/*.rake"].sort.each { |file| load(file) }
 
 task :default => :test
