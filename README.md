@@ -4,19 +4,19 @@ Base structure for building API services
 
 ## Components
 
-- Sinatra
-- JSON
-- Foreman
-- Puma
-- Dotenv
-- Rspec
+- Sinatra - Web framework
+- JSON    - Parse and generate JSON data
+- Foreman - Process manager, integrates with updates, supervisord
+- Puma    - Web server, similar to Unicorn
+- Dotenv  - Environment variables loader
+- Rspec   - Testing framework
 
 Extras:
 
-- Active Record 4
-- Postgres Adapter
-- Sentry
-- Capistrano
+- Active Record 4  - Database adapter
+- Postgres Adapter - PostgreSQL database connector for AR
+- Sentry           - Exception notifications
+- Capistrano       - Deployment automation
 
 ## Getting Started
 
