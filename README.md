@@ -79,8 +79,8 @@ First step, add `sidekiq` gem into `Gemfile`:
 gem "sidekiq", "3.2.1"
 ```
 
-Then uncomment code in `config/initializers/sidekiq.rb` file. Initializer specified server and client
-connection settings. These are pretty much defaults from sidekiq's wiki.
+Then uncomment code in `config/initializers/sidekiq.rb` file. Initializer specifies 
+server and client connection settings. These are pretty much defaults from sidekiq's wiki.
 
 Last step is to enable sidekiq in Procfile:
 
