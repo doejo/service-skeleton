@@ -15,6 +15,9 @@ gem "puma",                            "2.9.0",  require: false
 gem "sentry-raven",                    "0.9.4",  require: false
 gem "foreman",                         "0.63.0", require: false
 
+# Optional gems
+# gem "sidekiq", "3.2.1"
+
 group :development do
   gem "capistrano",         "3.2.1"
   gem "capistrano-bundler", "1.1.2"

@@ -22,7 +22,11 @@ require "service/helpers"
 require "service/authentication"
 require "service/application"
 
-# Load all endpoints
+# Load service workers
+# require "service/workers/base_worker"
+# Dir["./service/workers/*_worker.rb"].each { |file| require(file) }
+
+# Load service endpoints
 Dir["./service/endpoints/*_endpoint.rb"].each { |file| require(file) }
 
 # Load middleware
