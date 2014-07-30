@@ -69,6 +69,25 @@ rake raven:test[dsn]        # Send a test event to the remote Sentry server
 rake test                   # Run RSpec code examples
 ```
 
+## Background jobs
+
+If you want to run background jobs, use [sidekiq](https://github.com/mperham/sidekiq). 
+First step, add `sidekiq` gem into `Gemfile`:
+
+```ruby
+# Lastest sidekiq version at the time
+gem "sidekiq", "3.2.1"
+```
+
+Then uncomment code in `config/initializers/sidekiq.rb` file. Initializer specified server and client
+connection settings. These are pretty much defaults from sidekiq's wiki.
+
+Last step is to enable sidekiq in Procfile:
+
+```
+worker: bundle exec sidekiq
+```
+
 ## Deployment
 
 Deployment is done via [Capistrano](http://capistranorb.com/). 
