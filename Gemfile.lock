@@ -107,24 +107,24 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers (~> 0.8)
-  activerecord (~> 4.1)
-  activerecord-postgresql-adapter (~> 0)
+  active_model_serializers (= 0.8.1)
+  activerecord (= 4.1.2)
+  activerecord-postgresql-adapter (= 0.0.1)
   capistrano (= 3.2.1)
   capistrano-bundler (= 1.1.2)
   capistrano-rails (= 1.1.1)
-  database_cleaner
-  dotenv (~> 0.11)
+  database_cleaner (= 1.3.0)
+  dotenv (= 0.11.1)
   foreman (= 0.63.0)
-  json (~> 1.8)
-  pg (~> 0.17.0)
-  puma (~> 2.9)
-  rack-contrib (~> 1.1)
-  rack-revision (~> 1.0)
-  rack-test
-  rake (~> 10)
-  rspec
-  sentry-raven (~> 0.9)
-  simplecov
-  sinatra (~> 1.4)
-  sinatra-activerecord (~> 2.0)
+  json (= 1.8.1)
+  pg (= 0.17.1)
+  puma (= 2.9.0)
+  rack-contrib (= 1.1.0)
+  rack-revision (= 1.0.2)
+  rack-test (= 0.6.2)
+  rake (= 10.3.2)
+  rspec (= 3.0.0)
+  sentry-raven (= 0.9.4)
+  simplecov (= 0.8.2)
+  sinatra (= 1.4.5)
+  sinatra-activerecord (= 2.0.2)

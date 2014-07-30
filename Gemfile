@@ -1,18 +1,18 @@
 source "https://rubygems.org"
 
-gem "sinatra",                         "~> 1.4"
-gem "json",                            "~> 1.8"
-gem "rake",                            "~> 10"
-gem "dotenv",                          "~> 0.11"
-gem "rack-revision",                   "~> 1.0"
-gem "rack-contrib",                    "~> 1.1"
-gem "activerecord",                    "~> 4.1"
-gem "active_model_serializers",        "~> 0.8"
-gem "sinatra-activerecord",            "~> 2.0"
-gem "pg",                              "~> 0.17.0"
-gem "activerecord-postgresql-adapter", "~> 0"
-gem "puma",                            "~> 2.9", require: false
-gem "sentry-raven",                    "~> 0.9", require: false
+gem "sinatra",                         "1.4.5"
+gem "json",                            "1.8.1"
+gem "rake",                            "10.3.2"
+gem "dotenv",                          "0.11.1"
+gem "rack-revision",                   "1.0.2"
+gem "rack-contrib",                    "1.1.0"
+gem "activerecord",                    "4.1.2"
+gem "active_model_serializers",        "0.8.1"
+gem "sinatra-activerecord",            "2.0.2"
+gem "pg",                              "0.17.1"
+gem "activerecord-postgresql-adapter", "0.0.1"
+gem "puma",                            "2.9.0",  require: false
+gem "sentry-raven",                    "0.9.4",  require: false
 gem "foreman",                         "0.63.0", require: false
 
 group :development do
@@ -22,8 +22,8 @@ group :development do
 end
 
 group :development, :test do
-  gem "rspec"
-  gem "rack-test"
-  gem "simplecov"
-  gem "database_cleaner"
+  gem "rspec",            "3.0.0"
+  gem "rack-test",        "0.6.2"
+  gem "simplecov",        "0.8.2"
+  gem "database_cleaner", "1.3.0"
 end
