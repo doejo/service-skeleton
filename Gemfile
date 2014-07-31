@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 
 gem "sinatra",                         "1.4.5"
+gem "sinatra-contrib",                 "1.4.2"
+gem "sinatra-activerecord",            "2.0.2"
 gem "json",                            "1.8.1"
 gem "rake",                            "10.3.2"
 gem "dotenv",                          "0.11.1"
@@ -8,7 +10,6 @@ gem "rack-revision",                   "1.0.2"
 gem "rack-contrib",                    "1.1.0"
 gem "activerecord",                    "4.1.2"
 gem "active_model_serializers",        "0.8.1"
-gem "sinatra-activerecord",            "2.0.2"
 gem "pg",                              "0.17.1"
 gem "activerecord-postgresql-adapter", "0.0.1"
 gem "puma",                            "2.9.0",  require: false

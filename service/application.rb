@@ -1,5 +1,6 @@
-require "sinatra"
+require "sinatra/base"
 require "sinatra/activerecord"
+require "sinatra/reloader" if ENV["RACK_ENV"] == "development"
 require "json"
 
 module Service
@@ -11,6 +12,10 @@ module Service
       set :dump_errors,     false
       set :raise_errors,    true
       set :show_exceptions, false
+    end
+
+    configure :development do
+      register Sinatra::Reloader
     end
 
     before do
