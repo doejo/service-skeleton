@@ -1,7 +1,11 @@
 module Service
   module Helpers
-    def json_response(object)
-      JSON.dump(object)
+    def json_response(object, options = nil)
+      if object.respond_to?(:to_json)
+        object.to_json(options)
+      else
+        JSON.dump(object)
+      end
     end
 
     def success_response(object)
