@@ -8,7 +8,7 @@ module Service
       end
     end
 
-    def success_response(object)
+    def success_response(object, options = nil)
       json_response(object)
     end
 
