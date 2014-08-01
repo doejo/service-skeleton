@@ -14,6 +14,9 @@ Dotenv.load
 ENV["RACK_ENV"] ||= "development"
 ENV["RAILS_ENV"] ||= ENV["RACK_ENV"]
 
+# Require libs
+require "active_model_serializers"
+
 # Require initializers
 Dir["./config/initializers/*.rb"].each { |file| require(file) }
 
