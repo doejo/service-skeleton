@@ -26,8 +26,10 @@ module Middleware
         @logger.info "Headers: #{headers}"
         @logger.info "Response:"
 
-        body.each do |line|
-          @logger.info(line)
+        if body.respond_to?(:each)
+          body.each do |line|
+            @logger.info(line)
+          end
         end
 
         @logger.info ""
