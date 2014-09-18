@@ -22,6 +22,10 @@ RSpec.configure do |config|
   config.include FixtureHelper
 
   config.before(:suite) do
+    if defined?(ActiveRecord)
+      ActiveRecord::Base.logger = nil
+    end
+
     DatabaseCleaner.clean_with(:truncation)
   end
 
