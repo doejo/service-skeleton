@@ -107,6 +107,7 @@ cap [stage] deploy       # Execute deployment
 Prepare test database first:
 
 ```
+rake db:create RACK_ENV=test
 rake db:schema:load RACK_ENV=test
 ```
 
