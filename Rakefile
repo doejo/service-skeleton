@@ -18,3 +18,22 @@ end
 Dir["#{File.dirname(__FILE__)}/tasks/**/*.rake"].sort.each { |file| load(file) }
 
 task :default => :test
+
+desc "Reinitialize git repository"
+task :init do
+  print "Re-initialize git repository? (y/n): "
+  ask = STDIN.gets.strip
+
+  if ask == "y"
+    puts "Removing .git dir"
+    `rm -rf ./.git`
+
+    puts "Creating a new repository"
+    `git init .`
+
+    puts "Making initial commit"
+    `git add . && git commit -m "Initial commit"`
+  else
+    puts "Skipped"
+  end
+end
