@@ -103,6 +103,13 @@ cap [stage] deploy:setup # Setup deployment structure on the server
 cap [stage] deploy       # Execute deployment
 ```
 
+If you plan on using Sentry for exceptions tracking, make sure to test your
+configuration. You can do that by running a rake task:
+
+```
+SENTRY_URL=your_sentry_url rake raven:test
+```
+
 ## Testing
 
 Prepare test database first:
