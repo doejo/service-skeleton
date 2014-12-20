@@ -66,6 +66,7 @@ rake db:setup               # Create the database, load the schema, and initiali
 rake db:structure:dump      # Dump the database structure to db/structure.sql
 rake db:version             # Retrieves the current schema version number
 rake raven:test[dsn]        # Send a test event to the remote Sentry server
+rake init                   # Reinitialize git repository
 rake test                   # Run RSpec code examples
 ```
 
