@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "sinatra",                         "1.4.5"
 gem "sinatra-contrib",                 "1.4.2"
-gem "sinatra-activerecord",            "2.0.2"
+gem "sinatra-activerecord",            "2.0.3"
 gem "json",                            "1.8.1"
 gem "rake",                            "10.3.2"
 gem "dotenv",                          "0.11.1"
