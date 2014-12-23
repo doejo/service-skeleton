@@ -1,6 +1,6 @@
 # Service Skeleton
 
-Service skeleton application that provides all necessary tools to buila an API service
+Service skeleton application that provides all necessary tools to build an API service
 or even more.
 
 ## Components
