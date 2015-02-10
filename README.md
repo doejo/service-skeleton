@@ -65,9 +65,10 @@ rake db:schema:load         # Load a schema.rb file into the database
 rake db:seed                # Load the seed data from db/seeds.rb
 rake db:setup               # Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the database first)
 rake db:structure:dump      # Dump the database structure to db/structure.sql
+rake db:structure:load      # Recreate the databases from the structure.sql file
 rake db:version             # Retrieves the current schema version number
-rake raven:test[dsn]        # Send a test event to the remote Sentry server
 rake init                   # Reinitialize git repository
+rake raven:test[dsn]        # Send a test event to the remote Sentry server
 rake test                   # Run RSpec code examples
 ```
 
@@ -128,6 +129,6 @@ rake test
 
 ## License
 
-The MIT License (MIT)
+The MIT License
 
 Copyright (c) 2014-2015 Doejo LLC
