@@ -130,4 +130,4 @@ rake test
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Doejo LLC
+Copyright (c) 2014-2015 Doejo LLC
