@@ -20,6 +20,10 @@ module Service
 
     before do
       content_type :json, encoding: "utf8"
+
+      if ENV["API_TOKEN"]
+        authenticate_request
+      end
     end
 
     not_found do
