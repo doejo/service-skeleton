@@ -13,7 +13,7 @@ gem "active_model_serializers",        "0.9.2"
 gem "pg",                              "0.17.1"
 gem "activerecord-postgresql-adapter", "0.0.1"
 gem "puma",                            "2.10.2", require: false
-gem "sentry-raven",                    "0.12.2", require: false
+gem "sentry-raven",                    "0.12.3", require: false
 gem "foreman",                         "0.63.0", require: false # DO NOT UPDATE
 
 # Optional gems
