@@ -17,14 +17,27 @@ module Middleware
         # Set exception backtrace only for development mode
         if ENV["RACK_ENV"] == "development"
           hash[:backtrace] = ex.backtrace
-          hash[:params]    = env
+          hash[:env]       = serialize_object(env)
         end
 
         [
           500,
           { "Content-Type" => "application/json" },
-          JSON.dump(hash)
+          [JSON.dump(hash)]
         ]
+      end
+    end
+
+    private
+
+    def serializable?(object)
+      [Integer, String, Array, Hash].include?(object.class)
+    end
+
+    def serialize_object(data)
+      data.select{|k,v| serializable?(v) }.inject({}) do |h, pair|
+        h[pair.first] = pair.last.is_a?(Hash) ? serialize_object(pair.last) : pair.last
+        h
       end
     end
   end
