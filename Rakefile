@@ -1,6 +1,9 @@
 require "./init"
-require "sinatra/activerecord/rake"
 require "raven/integrations/tasks"
+
+if defined?(ActiveRecord)
+  require "sinatra/activerecord/rake"
+end
 
 begin
   require "rspec/core/rake_task"
