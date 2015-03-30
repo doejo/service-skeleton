@@ -97,6 +97,16 @@ Last step is to enable sidekiq in Procfile:
 worker: bundle exec sidekiq
 ```
 
+## Middleware
+
+Skeleton application includes a few useful middleware modules:
+
+- Exception notifications (via Sentry)
+- Exception handling (respond with json on crashes)
+- Request logger (dumps request data into log in dev mode)
+- Revision header injection (adds X-Revision)
+- Runtime header injection (adds X-Runtime)
+
 ## Deployment
 
 Deployment is done via [Capistrano](http://capistranorb.com/). 
