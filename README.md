@@ -39,6 +39,12 @@ Create and migrate database:
 rake db:create db:migrate
 ```
 
+Re-initialize git repository (optional):
+
+```
+rake init
+```
+
 Start development server:
 
 ```
