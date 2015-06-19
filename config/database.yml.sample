@@ -13,3 +13,10 @@ development:
 test:
   <<: *defaults
   database: app_test
+
+production:
+  <<: *defaults
+  host: <%= ENV["PG_HOST"] %>
+  username: <%= ENV["PG_USER"] %>
+  password: <%= ENV["PG_PASSWORD"] %>
+  database: <%= ENV["PG_DATABASE"] %>
