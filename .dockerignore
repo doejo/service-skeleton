@@ -1,0 +1,9 @@
+.env
+.env.test
+.git
+log/*.log
+tmp
+tmp/*
+coverage
+.DS_Store
+database.yml
