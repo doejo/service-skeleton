@@ -50,8 +50,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
     pg (0.18.2)
-    puma (2.11.3)
-      rack (>= 1.1, < 2.0)
+    puma (2.14.0)
     rack (1.6.4)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
@@ -120,7 +119,7 @@ DEPENDENCIES
   foreman (= 0.63.0)
   json (= 1.8.1)
   pg (= 0.18.2)
-  puma (= 2.11.3)
+  puma (= 2.14.0)
   rack-contrib (= 1.2.0)
   rack-revision (= 1.0.2)
   rack-test (= 0.6.2)
@@ -131,3 +130,6 @@ DEPENDENCIES
   sinatra (= 1.4.6)
   sinatra-activerecord (= 2.0.6)
   sinatra-contrib (= 1.4.4)
+
+BUNDLED WITH
+   1.10.6
