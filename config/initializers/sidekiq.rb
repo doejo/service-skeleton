@@ -1,5 +1,6 @@
 # This is an example of Sidekiq Initialization
 
+# require "sidekiq"
 # redis_url = ENV["REDIS_URL"] = "redis://localhost:6379"
 
 # Sidekiq.configure_server do |config|
