@@ -54,6 +54,8 @@ GEM
     rack (1.6.4)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
+    rack-heartbeat (1.0.1)
+      rack
     rack-protection (1.5.3)
       rack
     rack-revision (1.0.2)
@@ -121,6 +123,7 @@ DEPENDENCIES
   pg (= 0.18.2)
   puma (= 2.14.0)
   rack-contrib (= 1.2.0)
+  rack-heartbeat (= 1.0.1)
   rack-revision (= 1.0.2)
   rack-test (= 0.6.2)
   rake (= 10.3.2)
